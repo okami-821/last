@@ -1,0 +1,768 @@
+@charset "UTF-8";
+/*------------------------------------------------------------------------------
+  reset CSS
+------------------------------------------------------------------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* ul、ol要素のリストスタイルを削除、デフォルトのスタイルが削除される */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+/* コアルートのデフォルトを設定する */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --easing: cubic-bezier(.2, 1, .2, 1);
+  --transition: .8s var(--easing);
+}
+
+/* body要素のデフォルト設定 */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  /* font-family: "Spartan", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "メイリオ", Meiryo, sans-serif; */
+  font-size: 62.5%;
+  line-height: 1.8;
+  height: 100%;
+  word-break: break-word;
+  color: #333;
+  /* background-color: var(--color-base); */
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background: #FFF;
+
+  /* display: flex;
+  flex-flow: column;
+  min-height: 100vh; */
+}
+
+/* クラスを持たない要素はデフォルトのスタイルを取得する */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+video,
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* 入力とボタンのフォントを継承する */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* アニメーションやトランジションを表示したくない人のために、
+すべてのアニメーションやトランジションを削除する */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  /* *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  } */
+}
+
+
+.main-container {
+  position: relative;
+}
+.outer-block {
+  min-width: 1040px;
+}
+/*------------------------------------------------------------------------------
+  LODING
+------------------------------------------------------------------------------*/
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+#loading {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+#loading-main {
+  display: block;
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  z-index: 105;
+  /* text-align:center; */
+	-webkit-animation: loading 1.5s linear infinite;
+	-moz-animation: loading 1.5s linear infinite;
+	-ms-animation: loading 1.5s linear infinite;
+	-o-animation: loading 1.5s linear infinite;
+	animation: loading 1.5s linear infinite;
+}
+#loading-main .test {
+  fill: white;
+}
+/* #loading-main:after,
+#loading-main:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin-left: -50%;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  border-radius: 110%; 
+} */
+/* #loading-main {
+  display: block;
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 105;
+} */
+  /* #loading-main:after {
+    -webkit-animation: loading 0.75s linear infinite;
+    animation: loading 0.75s linear infinite;
+    border: 10px solid transparent;
+    border-top-color: #666;
+  }
+  #loading-main:before {
+    border: 10px solid rgba(51, 51, 51, 0.15);
+  } */
+
+/*------------------------------------------------------------------------------
+  TOP
+------------------------------------------------------------------------------*/
+/* .mv-block {
+  position: relative;
+}
+.mv-ttl {}
+
+.mv-area {
+  height: 100vh;
+  width: 100vw;
+  background: #87ceeb;
+  position: relative;
+}
+.mv-area .Backimage-slider {
+  width: 50vw;
+  height: 40vw;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  position: absolute;
+  margin: auto;
+} */
+
+/*------------------------------------------------------------------------------
+  MAIN-CONTAINER SECTION_1
+------------------------------------------------------------------------------*/
+.sec01 {
+  width: 100vw;
+  height: 100vh;
+  background: #000; 
+  position: relative;
+  z-index: 9999999;
+}
+.sec01 h1 {
+  position: absolute;
+  z-index: 999;
+  display: inline-block;
+  top: 10px;
+  right: 10px;
+}
+.sec01 .PageTitles.is-hidden {
+  width: 100vw;
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  z-index: 999;
+}
+.sec01 .PageTitles .page-title-wrapp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sec01 .PageTitles .page-title-wrapp .page-title-flex-wrapp {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+.sec01 .PageTitles path,
+.sec01 .PageTitles .cls-10 {
+  opacity: 0;
+  transition: none;
+}
+.sec01 .PageTitles.is-hidden .cls-1 {
+  opacity: 1;
+  transition: opacity .6s 2.5s ease-in;
+}
+.sec01 .PageTitles.is-hidden .cls-2 {
+  opacity: 1;
+  transition: opacity .6s 1s ease-in;
+}
+.sec01 .PageTitles.is-hidden .cls-3 {
+  opacity: 1;
+  transition: opacity .6s 2.5s ease-in;
+}
+.sec01 .PageTitles.is-hidden .cls-4 {
+  opacity: 1;
+  transition: opacity .6s 1.5s ease-in;
+}
+.sec01 .PageTitles.is-hidden .cls-5 {
+  opacity: 1;
+  transition: opacity .6s 2s ease-in;
+}
+.sec01 .PageTitles.is-hidden .cls-6 {
+  opacity: 1;
+  transition: opacity .6s 1s ease-in;
+}
+.sec01 .PageTitles.is-hidden .cls-7 {
+  opacity: 1;
+  transition: opacity .6s 2.5s ease-in;
+}
+.sec01 .PageTitles.is-hidden .cls-8 {
+  opacity: 1;
+  transition: opacity .6s 2s ease-in;
+}
+.sec01 .PageTitles.is-hidden .cls-9 {
+  opacity: 1;
+  transition: opacity .6s 3.5s ease-in;
+}
+.sec01 .PageTitles.is-hidden .cls-10 {
+  opacity: 1;
+  transition: opacity .6s 4s ease-in;
+}
+@keyframes down {
+  0% {
+    top: 0px;
+  }
+  100% {
+    top: 200px;
+  }
+}
+.page-title {
+  width: 500px;
+  position: relative;
+  left: 0;
+  top: 0;
+
+  animation-name: down;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  animation-delay: 4.9s;
+  animation-timing-function: cubic-bezier(.89,0,.2,.99);
+}
+
+
+
+.sec01 .swiper-fade .swiper-slide,
+.sec03 .swiper-fade .swiper-slide {
+  -webkit-transition-property: opacity, -webkit-transform !important;
+  transition-property: opacity, -webkit-transform !important;
+  transition-property: opacity, transform !important;
+  transition-property: opacity, transform, -webkit-transform !important;
+  pointer-events: none;
+}
+.sec01 .FakeOpacity {
+  max-width: 100%;
+}
+.sec01 .FakeOpacity::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(180deg, transparent 0 60%, #000 100%);
+}
+.sec01 {
+  position: sticky;
+}
+.sec01 .slide-media,
+.sec03 .slide-media {
+  /* position: relative; */
+  position: sticky;
+  overflow: hidden;
+  height: 100vh;
+}
+.sec01 .slide-media img,
+.sec03 .slide-media img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 5s 1s ease-out;
+  /* transition 要素の２つの状態間の変化を定義する
+
+  transition-property,　変化をつける
+  transition-duration,　アニメーションの所要時間
+  transition-timing-function　→ ease-out,　トランジションは速い速度で始まり、次第に遅くなる
+  transition-delay　開始待ち時間
+  */
+}
+.sec01 .swiper-slide[class*=-active] .slide-media img,
+.sec03 .swiper-slide[class*=-active] .slide-media img {
+  transition-delay: 0s;
+  transform: scale(1.05);
+  /*transform 与えられた要素を回転、拡大縮小、傾斜、移動
+    scale(水平,垂直) 変形
+  */
+}
+/* .sec01 .swiper-slide[class*=-active] .slide-title {
+  animation: sec01-fadeIn 2s .5s var(--easing) both;
+} */
+/* @keyframes sec01-fadeIn {
+  0% {
+    transform: scale(.5s);
+    opacity: 0;
+    fill: blur(300px);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+} */
+/*------------------------------------------------------------------------------
+  READ
+------------------------------------------------------------------------------*/
+.read-wrapp {
+  background: #000;
+}
+.read-wrapp p {
+  width: 800px;
+  margin: auto;
+  text-align: left;
+  color: white;
+  font-size: 18px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 60px 0;
+}
+
+/*------------------------------------------------------------------------------
+  MAIN-CONTAINER SECTION_2
+------------------------------------------------------------------------------*/
+.sec02,
+.sec04 {
+  padding: 80px 0 100px 0;
+}
+.sec02 .container,
+.sec04 .container {
+  width: 100%;
+  max-width: 1300px;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.sec04 .container{
+  flex-direction: row-reverse;
+}
+.sec02 .container .large-image,
+.sec04 .container .large-image {
+  width: calc(100% - 39% - 5%); /*56% 728px*/
+}
+.sec02 .container .group-area,
+.sec04 .container .group-area {
+  width: calc(100% - 54% - 5%); /*41%  533px*/
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.sec02 .container .delay-element,
+.sec04 .container .delay-element {
+  opacity: 0;
+  transform: translateY(150px);
+  transition: opacity 1s, transform 1s;
+}
+.sec02 .container .delay-element.appear,
+.sec04 .container .delay-element.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* .sec02 .container .delay-element.delay1 {
+  transition-delay: 1.5s;
+  animation-duration: 2s;
+  transition-timing-function: ease-in-out;
+} */
+.sec02 .container .delay-element.delay2,
+.sec04 .container .delay-element.delay2 {
+  transition-delay: 0.5s;
+  animation-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transform: rotate(5deg);
+}
+.sec02 .block-main-image,
+.sec04 .block-main-image {
+  max-width: 950px;
+  margin: 0 auto 80px;
+}
+
+/* 横スクロールセクション */
+.side-scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.side-scroll-heading {
+  color: #eeebdd;
+}
+.side-scroll-list-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin: 40px 0;
+  overflow: hidden;
+}
+.side-scroll-list {
+  position: absolute;
+  display: flex;
+}
+.side-scroll-item + .side-scroll-item {
+  margin-left: 60px;
+}
+
+
+/*------------------------------------------------------------------------------
+  MAIN-CONTAINER SECTION_3
+------------------------------------------------------------------------------*/
+.sec03 .interview-title {
+  width: 100vw;
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: -600px;
+  z-index: 999;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* .sec03 .interview-title {
+  -webkit-animation: mv01-fadeIn 2s 0.5s var(--easing) both;
+          animation: mv01-fadeIn 2s 0.5s var(--easing) both;
+} */
+/* @-webkit-keyframes mv01-fadeIn {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+    -webkit-filter: blur(300px);
+            filter: blur(300px);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+} */
+/* @keyframes mv01-fadeIn {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+    -webkit-filter: blur(300px);
+            filter: blur(300px);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+} */
+.sec03 .interview-box {
+  position: absolute;
+  right: 0;
+  bottom: 100px;
+  left: 0;
+  background: hsla(0, 0%, 100%, .6);
+  z-index: 888;
+  width: 800px;
+  margin: auto;
+  height: 450px;
+  overflow: hidden;
+  overflow: hidden scroll;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+.sec03 .interview-box::-webkit-scrollbar {
+  width: 5px;
+  margin-right: 10px;
+}
+.sec03 .interview-box::-webkit-scrollbar-track {
+  background: white;
+}
+.sec03 .interview-box::-webkit-scrollbar-thumb {
+  background: black;
+}
+.sec03 .interview-box p {
+  width: 800px;
+  font-size: 16px;
+}
+
+
+/*------------------------------------------------------------------------------
+  MAIN-CONTAINER SECTION_4
+------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------
+  FOOTER
+------------------------------------------------------------------------------*/
+.footer-wrapper {
+  background: #000;
+  color: #D8D8D8;
+  padding: 100px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.footer-wrapper .profile-box {
+  font-size: 16px;
+  max-width: 800px;
+}
+.footer-wrapper .costumelist-box {
+  max-width: 700px;
+}
+
+.footer-wrapper .snsicon-box {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.footer-wrapper .snsicon-box ul {
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+}
+.footer-wrapper .snsicon-box a {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------------------------------------
+* Modules エントリーポイント
+-------------------------------------------------- */
+@media only screen and (max-width: 1024px) {}
+@media only screen and (max-width: 599px) {}
+@media only screen and (min-width: 1025px) {}
+@media only screen and (min-width: 600px) {}
+
+
+
+
+/* ----------------------
+* 1024px以下
+------------------------- */
+@media (width <= 1024px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    /*一部のモバイル端末で使われる、テキストの自動拡大アルゴリズムを制御*/
+  }
+  /* .sec01 .slide-media {
+    height: max(70vh,70vw);
+  } */
+}
+@media screen and (max-width: 1024px){
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  /* .sec01 .slide-media {
+    height: max(70vh,70vw);
+  } */
+}
+/* ----------------------
+* 599px以下
+------------------------- */
+@media (width <= 599px) {}
+/* ----------------------
+* 1025px以上
+------------------------- */
+@media (width >= 1025px) {}
+
+
+
+
+
+
+
+
+
+
+
+/* Backimage-slider */
+.Backimage-slider {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: black; */
+}
+.Backimage-slider .image {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.Backimage-slider .image:nth-of-type(1) {
+  background-image: url(https://picsum.photos/id/237/960/540);
+}
+.Backimage-slider .image:nth-of-type(2) {
+  animation-delay: 5s;
+  background-image: url(https://picsum.photos/id/238/960/540);
+}
+.Backimage-slider .image {
+  animation-name: Backimage-slider-anime;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+@keyframes Backimage-slider-anime {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.18);
+  }
+}
+/* .Image-wrapp {
+  width: 100%;
+  height: 100vh;
+  background: url(https://cdn.pixabay.com/photo/2016/06/11/12/13/pink-hair-1450045_1280.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+} */
+
+
+/*  swiper slide  */
+.SlideShow {
+  overflow: hidden;
+}
+.SlideShow .swiper {
+  overflow: visible;
+}
+.SlideShow .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+.SlideShow .swiper-slide {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.SlideShow .slide {
+  overflow: hidden;
+  width: 26rem;/*416px*/
+  transition: var(--transition);
+}
+.SlideShow .slide img {
+  transition: var(--transition);
+}
+
+
+
+
