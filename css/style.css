@@ -581,10 +581,6 @@ main {
 .sec03 .mv01 .l-inner {
   padding-bottom: 0;
 } */
-.sec01 .mv01 .slide-media,
-.sec03 .mv01 .slide-media {
-  height: 800px;
-}
 .sec01 .mv01 .swiper-fade .swiper-slide,
 .sec03 .mv01 .swiper-fade .swiper-slide {
   -webkit-transition-property: opacity, -webkit-transform !important;
@@ -796,7 +792,8 @@ main {
   justify-content: center;
 }
 .sec03 .interview-text {
-  width: 800px;
+  width: 100%;
+  max-width: 800px;
   margin: 40px auto 45px;
   position: absolute;
   right: 0;
@@ -813,6 +810,9 @@ main {
   font-size: 18px;
   line-height: 1.6;
   transform: translateY(40px);
+  font-family: heisei-mincho-std, serif;
+  font-weight: 300;
+  font-style: normal;
 }
 /* .sec03 .interview-title {
   -webkit-animation: mv01-fadeIn 2s 0.5s var(--easing) both;
@@ -851,7 +851,8 @@ main {
   }
 } */
 .sec03 .interview-box {
-  width: 100%;
+  
+  width: 80%;
   max-width: 800px;
   height: 400px;
   margin: auto;
@@ -860,7 +861,7 @@ main {
 
   position: absolute;
   right: 0;
-  bottom: 12%;
+  bottom: 40px;
   left: 0;
   z-index: 99999;
   background: hsla(0, 0%, 100%, .6);
@@ -1140,6 +1141,18 @@ main {
   .sec02 .block-main-image, .sec04 .block-main-image {
     margin: -170px auto 80px;
   }
+  /* .sec03 .interview-svg {
+    padding: 0 20px;
+  } */
+  .sec03 .interview-text {
+    padding: 0 20px;
+  }
+  @media screen and (max-width: 1024px) {
+    .l-wrapper {
+    height: 235vw;
+    background-color: #000;
+    }
+    }
 
   
 
