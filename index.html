@@ -112,7 +112,7 @@
 <path class="cls-9" d="M318.783775,25 C327.47343,18.3538462 330.128602,13.1846154 330.128602,8.38461538 C330.128602,4.44615385 327.232051,1 323.128602,1 C319.025154,1 316.128602,4.44615385 316.128602,8.38461538 C316.128602,12.3230769 319.869982,15.1538462 324.09412,14.6615385 C323.611361,16.8769231 319.990671,20.3230769 316.85274,22.4153846 L318.783775,25 Z" id="’" fill="#BC2127"></path>
 </g></g></g></svg>
 </h2>
-<p class="page-title cls-10"><img src="./images/page-title.png" alt=""></p>
+<p class="page-title cls-10"><img src="./images/page-title.png" alt="" class="sab-ttl"></p>
     </div>
   </div>
 </div>
@@ -434,6 +434,20 @@
         <li><a href="#"><img src="./images/twitter.png" alt=""></a></li>
       </ul>
     </div>
+    <script>
+      function twShare(url, winWidth, winHeight) {
+        var title = 'タイトルがはいります';
+        window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) + '&url=' + url, 'sharewindow', 'toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+      }
+      function fbShare(url, winWidth, winHeight) {
+        window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, 'sharewindow', 'toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+      }
+    </script>
+    
+    <ul>
+      <li><a href="javascript:fbShare('url', 500, 450)" rel="nofollow noopener noreferrer" class="facebook"><img src="./images/facebook.png" alt=""></a></li>
+      <li><a href="javascript:twShare('url', 500, 450)" rel="nofollow noopener noreferrer" class="twitter"><img src="./images/twitter.png" alt=""></a></li>
+    </ul>
   <div class="logo-wrap"><a href="https://www.wwdjapan.com/" target="_blank" rel="noopener noreferrer">
     <svg width="100px" viewBox="0 0 131 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs><polygon id="path-om-e3b66ku-1" points="0 0 130 0 130 38.5927129 0 38.5927129"></polygon></defs>
@@ -533,20 +547,26 @@
   });
 </script>
 <script>
-  function twShare(url, winWidth, winHeight) {
-    var title = 'タイトルがはいります';
-    window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) + '&url=' + url, 'sharewindow', 'toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+  $(window).on('load', function() {
+  HeroHeightSetting();
+});
+
+$(window).on('resize', function() {
+  HeroHeightSetting();
+});
+
+function HeroHeightSetting() {
+  var winW = $(window).width();
+  var winH = $(window).height();
+  var BREAKPOINT_SP = 1024;
+
+  if ( winW <= BREAKPOINT_SP ) {
+    $('.sec01 .mv01 .swiper').css('height', winH);
+  } else {
+    $('.sec01 .mv01 .swiper').css('height', 'auto');
   }
-  function fbShare(url, winWidth, winHeight) {
-    window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, 'sharewindow', 'toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
-  }
+}
 </script>
-
-<ul>
-  <li><a href="javascript:fbShare('url', 500, 450)" rel="nofollow noopener noreferrer" class="facebook"><img src="./images/facebook.png" alt=""></a></li>
-  <li><a href="javascript:twShare('url', 500, 450)" rel="nofollow noopener noreferrer" class="twitter"><img src="./images/twitter.png" alt=""></a></li>
-</ul>
-
 
 </body>
 </html>
