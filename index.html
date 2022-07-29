@@ -157,7 +157,7 @@
       <img src="./images/02.png" alt="" class="sp delay-element">
     </div>
     <div class="group-area">
-      <video class="video-area" autoplay loop muted poster="" playsinline width="100%">
+      <video class="video-area" loop autoplay muted playsinlin>
         <source src="./images/bowling.mp4" type="video/mp4">
       </video>
       <div class="small-image delay-element delay2 pc">
@@ -201,6 +201,7 @@
   <div class="block-main-image">
     <img src="./images/03.jpg" class="delay-element" alt="">
   </div>
+
   <div class="SlideShow">
     <div class="swiper LowerSlide">
       <div class="swiper-wrapper">
@@ -409,11 +410,12 @@
 <footer class="footer-wrapper">
   <div class="box26">
     <span class="box-title"></span>
-    <p class="profile-box">other-block1985年生まれ。東京都出身。2000年女優デビュー。01年の「3年B組金八先生」で性同一性障害の生徒役で大きな反響を呼ぶ。ドラマ「半沢直樹」「昼顔～平日午後3時の恋人たち」で女性心理を見事に演じ話題に。現在もドラマや映画、CMなどさまざまなフィールドで活躍</p>
+    <p class="profile-box">1985年生まれ。東京都出身。2000年女優デビュー。01年の「3年B組金八先生」で性同一性障害の生徒役で大きな反響を呼ぶ。ドラマ「半沢直樹」「昼顔～平日午後3時の恋人たち」で女性心理を見事に演じ話題に。現在もドラマや映画、CMなどさまざまなフィールドで活躍</p>
   </div>
     <ul class="costumelist-box">
-      <li>NEW FEMINITY/コート29万2600円、ワンピース14万8500円、サンダル11万2200円／以上スポーツマックス（マックスマーラ ジャパン0120-030-535）</li>
-      <li>HANDSOME CHIC/ノースリーブジャケット11万5500円、スカート6万9300円、パンツ7万9200円、シューズ10万3400円／以上スポーツマックス（マックスマーラ ジャパン0120-030-535）</li>
+      <li>NEW FEMINITY/コート29万2600円、ワンピース14万8500円、サンダル11万2200円（参考価格）／以上スポーツマックス（マックスマーラ ジャパン0120-030-535）</li>
+      <li>HANDSOME CHIC/ノースリーブジャケット11万5500円、スカート6万9300円、パンツ6万9300
+        円、シューズ10万3400円／以上スポーツマックス（マックスマーラ ジャパン0120-030-535）</li>
     </ul>
     <ul class="stafflist-box">
       <li>MODEL：AYA UETO</li>
@@ -530,6 +532,21 @@
     },
   });
 </script>
+<script>
+  function twShare(url, winWidth, winHeight) {
+    var title = 'タイトルがはいります';
+    window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(title) + '&url=' + url, 'sharewindow', 'toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+  }
+  function fbShare(url, winWidth, winHeight) {
+    window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, 'sharewindow', 'toolbar=0,status=0,width=' + winWidth + ',height=' + winHeight);
+  }
+</script>
+
+<ul>
+  <li><a href="javascript:fbShare('url', 500, 450)" rel="nofollow noopener noreferrer" class="facebook"><img src="./images/facebook.png" alt=""></a></li>
+  <li><a href="javascript:twShare('url', 500, 450)" rel="nofollow noopener noreferrer" class="twitter"><img src="./images/twitter.png" alt=""></a></li>
+</ul>
+
 
 </body>
 </html>
