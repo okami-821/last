@@ -439,11 +439,26 @@ main {
 }
 .sec01 h1 {
   position: absolute;
-  z-index: 999;
+  z-index: 999999999;
   display: inline-block;
   top: 10px;
   right: 10px;
 }
+.sec01 h1 a {
+  opacity: 1;
+  display: block;
+  animation: ddd .4s 6s ease-in;
+}
+/* }
+@keyframes ddd {
+  to {
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+  }
+} */
+
 /*------------------------------------------------------------------------------
   MAIN-CONTAINER SECTION_1 PAGE-TAITLE
 ------------------------------------------------------------------------------*/
@@ -459,6 +474,7 @@ main {
   animation-duration: 7.5s;
   animation-timing-function: linear;
   animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
+  animation-iteration-count:1;
 }
 @keyframes blackout {
   0% {
@@ -567,6 +583,7 @@ main {
   transition: opacity .2s 3.5s ease-in;
 }
 
+
 /*------------------------------------------------------------------------------
   MAIN-CONTAINER SECTION_1,3 SRIDER
 ------------------------------------------------------------------------------*/
@@ -639,7 +656,7 @@ main {
 .read-wrapp p {
   width: 100%;
   max-width: 800px;
-  margin: auto;
+  margin: 80px auto 0;
   font-size: 18px;
   text-align: left;
   color: white;
@@ -1071,10 +1088,18 @@ main {
 
   .read-wrapp {
     position: static;
+    padding: 0;
   }
   .read-wrapp p {
     width: 80%;
     font-size: 16px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    z-index: 888888;
+    top: 65%;
+    left: 0;
+    right: 0;
   }
   @keyframes down {
     0% {
@@ -1109,6 +1134,14 @@ main {
   /* .other-block {
     padding: 0;
   } */
+  .sec02, .sec04 {
+    margin-top: 45px;
+    margin-bottom: 60px;
+  }
+  .sec02 .container .group-area,
+  .sec04 .container .group-area {
+    margin-top: 0;
+  }
   .sec02 .container, 
   .sec04 .container {
     padding: 0;
@@ -1126,7 +1159,7 @@ main {
     transform: translate(25%, -10%);
   }
   .sec02 .side-scroll-item {
-    height: 60px;
+    height: 50px;
   }
   .side-scroll-item + .side-scroll-item {
     margin-left: -290px;
@@ -1136,7 +1169,7 @@ main {
     padding: 0 20px;
   }
   .side-scroll-list-wrapper {
-    top: -103px;
+    top: -97px;
   }
   .sec02 .block-main-image, .sec04 .block-main-image {
     margin: -170px auto 80px;
@@ -1147,11 +1180,16 @@ main {
   .sec03 .interview-text {
     padding: 0 20px;
   }
-  @media screen and (max-width: 1024px) {
+  /* @media screen and (max-width: 1024px) {
     .l-wrapper {
     height: 235vw;
     background-color: #000;
     }
+    } */
+    @media screen and (max-width: 1024px) {
+      .sec01 .l-wrapper {
+        height: auto;
+      }
     }
 
   
@@ -1221,6 +1259,10 @@ main {
   .footer-wrapper {
     padding: 40px 20px;
   } */
+.sab-ttl {
+  display: inline-block;
+    margin-top: -23%;
+  }
 
 
 
