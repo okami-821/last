@@ -1151,7 +1151,7 @@ main {
 /* ----------------------
 * 599
 ------------------------- */
-@media screen and (max-width: 399px) {
+@media screen and (max-width: 599px) {
   .sec02 .side-scroll-item + .side-scroll-item {
     margin-left: -413px;
   }
@@ -1181,14 +1181,21 @@ main {
     max-height: fit-content;
   }
   .sec03 .interview-box { 
-    max-height: 480px;
+    max-height: 514px;
   }
   .sec01 .PageTitles.is-hidden {
     width: 100vw;
     position: absolute;
     bottom: 32%;
     left: 0;
-}
+  }
+  .box26 .box-title::after {
+    width: 191px;
+  }
+  .box26 .box-title {
+    top: -14%;
+    left: 11%;
+  }
 }
 
 /* ----------------------
@@ -1200,11 +1207,14 @@ main {
       left: 3%;
   }
   .box26 .box-title::after {
-    width: 182px;
+    width: 172px;
   }
   .box26 .box-title {
     top: -10%;
-    left: 10%;
+    left: 9%;
+  }
+  .sec03 .interview-box {
+    max-height: 433px;
   }
 }
   /* .test .swiper-wrapper {
