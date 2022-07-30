@@ -276,7 +276,7 @@ main {
 .sec01 h1 {
   position: absolute;
   z-index: 999999999;
-  top: 10px;
+  top: -3px;
   right: 11.5px;
 }
 .sec01 h1 a {
@@ -326,7 +326,7 @@ main {
     top: 0px;
   }
   100% {
-    top: 200px;
+    top: 0;
   }
 }
 .page-title {
@@ -342,7 +342,7 @@ main {
   animation-timing-function: ease;
   animation-fill-mode: forwards;
   animation-delay: 4.9s;
-  animation-timing-function: cubic-bezier(.89,0,.2,.99);
+  /* animation-timing-function: cubic-bezier(.89,0,.2,.99); */
 }
 .sec01 .PageTitles.is-hidden {
   width: 100vw;
@@ -410,6 +410,7 @@ main {
   opacity: 1;
   transition: opacity .2s 3.5s ease-in;
 }
+
 
 
 /*------------------------------------------------------------------------------
@@ -941,7 +942,7 @@ main {
       top: 0px;
     }
     100% {
-      top: 120px;
+      top: 0px;
     }
   }
   .page-title {
@@ -957,7 +958,7 @@ main {
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     animation-delay: 4.9s;
-    animation-timing-function: cubic-bezier(.89,0,.2,.99);
+    /* animation-timing-function: cubic-bezier(.89,0,.2,.99); */
   }
   /* .sec01 .PageTitles .cls-10 {
     transform: translateY(-50px);
@@ -992,7 +993,7 @@ main {
     padding: 0 20px;
   }
   .sec02 img.sp.delay-element {
-    transform: translate(39%, -10%);
+    transform: translate(25%, -10%);
   }
   .sec02 .side-scroll-item,
   .sec04 .side-scroll-item {
@@ -1047,7 +1048,8 @@ main {
   .sec04 .block-main-image {
     width: 90%;
     max-width: 100%;
-    margin: -80px auto 40px;
+    margin: -164px auto 40px;
+    padding: 0;
   }
   .sec02 .container .group-area,
   .sec04 .container .group-area {
@@ -1081,8 +1083,8 @@ main {
     padding: 30px 25px;
   }
   .box26 .box-title {
-    top: -9%;
-    left: 8%;
+    top: -15%;
+    left: 26%;
   }
   .footer-wrapper .costumelist-box {
     margin: 0 auto 45px;
@@ -1111,14 +1113,11 @@ main {
   }
   .sec04 .container .large-image .delay-element  {
     transform: translate(-5%, -15%);
-    width: 90%;
   }
   .sec04 .container .group-area {
     margin-bottom: -40px;
   }
-  .sec02 .side-scroll-item + .side-scroll-item {
-    margin-left: -413px;
-  }
+
   .sec04 .side-scroll-item + .side-scroll-item {
     margin-left: -514px;
   }
@@ -1132,15 +1131,13 @@ main {
     margin: 20px;
   }
   .sec03 .interview-box p {
-    padding: 25px;
+    padding: 0;
   }
   .sec01 h1 {
     right: 11.5px;
     top: -2px;
   }
-  .sec02 img.sp.delay-element {
-    width: 90%;
-  }
+
 
 
 
@@ -1160,38 +1157,78 @@ main {
   }
   .sec04 .side-scroll-item + .side-scroll-item {
     margin-left: -514px;
-    margin: 45px auto 0;
   }
-
-}
-/* ----------------------
-* 399
-------------------------- */
-@media screen and (max-width: 399px) {
+  .side-scroll-list-wrapper {
+    top: -91px;
+  }
+  .sec04 .side-scroll-list-wrapper {
+    top: -107px;
+  }
+  .sec04 .block-main-image {
+    margin: -186px auto 40px
+  }
   .sec03 .interview-title {
-    margin: 30px auto 0;
-  }
+    margin: 21px auto 0;
+  } 
   .sec03 .interview-text {
-    margin: -90px auto 20px
-  }
-  .sec03 .interview-text p {
-    font-size: 14px;
-  }
+    margin: -123px auto 20px;
+  } 
   .sec03 .interview-box {
     margin-top: -30%;
     min-height: 0;
     max-height: 300px;
     bottom: 0;
+    max-height: fit-content;
   }
+  .sec03 .interview-box { 
+    max-height: 480px;
+  }
+  .sec01 .PageTitles.is-hidden {
+    width: 100vw;
+    position: absolute;
+    bottom: 32%;
+    left: 0;
+}
+}
+
+/* ----------------------
+* 399
+------------------------- */
+@media screen and (max-width: 399px) {
+  .box26 .box-title::after {
+      top: -8%;
+      left: 3%;
+  }
+  .box26 .box-title::after {
+    width: 182px;
+  }
+  .box26 .box-title {
+    top: -10%;
+    left: 10%;
+  }
+}
   /* .test .swiper-wrapper {
     width: 100%!important;
     height: 600px!important;
   }
    */
+
+/* ----------------------
+* 374
+------------------------- */
+@media screen and (max-width: 374px) {
+  .box26 .box-title::after {
+    width: 140px;
+  }
+  .box26 .box-title {
+    top: -8%;
+    left: 12%;
+}
+}
 /* ----------------------
 * 319
 ------------------------- */ 
-@media screen and (max-width: 399px) {
+@media screen and (max-width: 319px) {
   .sec01 h1 {
     right: 11.5px;
     top: -3px;
