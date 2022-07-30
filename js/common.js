@@ -3,81 +3,93 @@
 
   /* LODING
 ------------------------------*/
-(function(){
-  const loading = document.getElementById('loading');
-
-  imagesLoaded( '.mv-block', { background: ".Backimage-slider" }, function() {
-    const msM = 1000;
-    loading.style.transition = 'opacity ' + msM + 'ms';
-    
-    const loadingOpacity = function(){
-       loading.style.opacity = 0;
-    }
-    const loadingDisplay = function(){
-      loading.style.display = "none";
-    }
-   
-    setTimeout(loadingOpacity, 1000);
-    setTimeout(loadingDisplay, 10000 + msM);
+  //logoの表示
+  $(window).on('load',function(){
+    $("#loading").delay(5000).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+    $("#loading-main").delay(500).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
   });
-}());
 
 /* HEADER
 ------------------------------*/
-
 (function() {
   window.onload = function(){
     let element = document.getElementById('PageTitles').classList.add('is-hidden');
   };
 }());
 
+/* FADEIN-FADEOUT
+------------------------------*/
+(function() {
+  const mySwiper = new Swiper('.mv01 .swiper', {
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    loop: true,
+    loopAdditionalSlides: 1,
+    speed: 1000,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+      waitForTransition: false,
+    },
+    followFinger: false,
+    pagination: {
+      el: '.mv01 .swiper-pagination',
+      clickable: true,
+    },
+  });
+}());
+(function() {
+  $(window).on('load', function() {
+    HeroHeightSetting();
+  });
+  
+  $(window).on('resize', function() {
+    HeroHeightSetting();
+  });
+  
+  function HeroHeightSetting() {
+    var winW = $(window).width();
+    var winH = $(window).height();
+    var BREAKPOINT_SP = 1024;
+  
+    if ( winW <= BREAKPOINT_SP ) {
+      $('.sec01 .mv01 .swiper').css('height', winH);
+    } else {
+      $('.sec01 .mv01 .swiper').css('height', 'auto');
+    }
+  }
+}());
 
+/* IntersectionObserver
+------------------------------*/
+(function() {
+    const targets = document.querySelectorAll('.delay-element');
 
-
-
-// (function() {
-//   const mySwiper = new Swiper('.sec01 .swiper', {
-//     effect: 'fade',
-//     fadeEffect: {
-//       crossFade: true,
-//     },
-//     loop: true,
-//     loopAdditionalSlides: 1,
-//     speed: 500,
-//     autoplay: {
-//       delay: 5000,
-//       disableOnInteraction: false,
-//       waitForTransition: false,
-//     },
-//     followFinger: false,
-//     pagination: {
-//       el: '.sec01 .swiper-pagination',
-//       clickable: true,
-//     },
-//   });
-// }());
-
-// (function() {
-//   const mySwiper2 = new Swiper('.sec03 .swiper', {
-//     effect: 'fade',
-//     fadeEffect: {
-//       crossFade: true,
-//     },
-//     loop: true,
-//     loopAdditionalSlides: 1,
-//     speed: 500,
-//     autoplay: {
-//       delay: 5000,
-//       disableOnInteraction: false,
-//       waitForTransition: false,
-//     },
-//     followFinger: false,
-//     pagination: {
-//       el: '.sec03 .swiper-pagination',
-//       clickable: true,
-//     },
-//   });
-// }());
+    function callback(entries, obs) {
+      console.log(entries);
+  
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+    
+        entry.target.classList.add('appear');
+        obs.unobserve(entry.target);
+      });
+    }
+  
+    const options = {
+      threshold: 0.2,
+    };
+  
+    const observer = new IntersectionObserver(callback, options);
+  
+    targets.forEach(target => {
+      observer.observe(target);
+    });
+}());
 
 /* sec02,sec04 TitleSlide
 ------------------------------*/
@@ -151,19 +163,18 @@
         momentum: false,
       },
       breakpoints: {
-        // ウィンドウサイズが320px以下
-        320: {
-          slidesPerView: 1.5,
-        },
-        // ウィンドウサイズが480px以下
-        480: {
-          slidesPerView: 3,
-          spaceBetween: 10
-        },
-        // ウィンドウサイズが640px以下
-        640: {
-          slidesPerView: 3,
-          spaceBetween: 30
+           // when window width is >= 320px
+      320: {
+        slidesPerView: 1.5,
+        spaceBetween: 270
+      },
+      // when window width is >= 640px
+      640: {
+        slidesPerView: 4,
+        spaceBetween: 40
+      },
+        1025: {
+          spaceBetween: 32,
         }
       },
       grabCursor: true,
@@ -194,13 +205,6 @@
     initSwiper('b');
   });
 }());
-
-
-
-
-
-
-
 
 }());
 
