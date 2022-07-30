@@ -293,45 +293,22 @@ main {
 .SlideShow .slide img {
   transition: var(--transition);
 }
-.swiper-container {
-  position: relative; 
-}
-.swiper-container:before {
-  content: "";
-  display: block;
-  padding-top: 50%;
-}
-/* .swiper-wrapper {
-  position: absolute; 
-  top: 0;
-  left: 0;
-}
-.swiper-wrapper img {
-    width: 100%;
-    height: auto;
-} */
-/*画像の比率*/
-.swiper-container,
-.swiper-slide {
-   height: 100vh!important;
-}
-.swiper-slide > img {
-  object-fit: cover!important;
-  width: 100%!important;
-  height: 100%!important;
-}
-
-
 
 /*------------------------------------------------------------------------------
   MAIN-CONTAINER WWD-ICON
 ------------------------------------------------------------------------------*/
+.sec01 {
+  width: 100vw;
+  height: auto;
+  /* height: 100vh; 怪しい光を放つ原因*/
+  position: relative;
+  background: #000; 
+}
 .sec01 h1 {
-  width: 100px;
   position: absolute;
   z-index: 999999999;
+  top: -3px;
   right: 11.5px;
-  top: 18px;
 }
 .sec01 h1 a {
   display: block;
@@ -341,13 +318,6 @@ main {
 /*------------------------------------------------------------------------------
   MAIN-CONTAINER SECTION_1 PAGE-TAITLE
 ------------------------------------------------------------------------------*/
-.sec01 {
-  width: 100vw;
-  height: auto;
-  /* height: 100vh; 怪しい光を放つ原因*/
-  position: relative;
-  background: #000; 
-}
 /* .sec01::before{
   content: '';
   position:fixed;
@@ -563,6 +533,7 @@ main {
 .sec04 {
   margin-top: 80px;
   margin-bottom: 110px;
+
 }
 .sec02 .container,
 .sec04 .container {
@@ -1258,12 +1229,11 @@ main {
       top: -15%;
       left: 10%;
   }
-
   /*ギャラリースライドショーSP版の高さを変更*/
   .sec02 .swiper-wrapper,
   .sec04 .swiper-wrapper {
     width: 100%;
-    height: 400px!important;
+    height: 460px!important;
   }
 }
 
@@ -1319,12 +1289,6 @@ main {
     top: -7%;
     left: 7%;
   }
-    /*ギャラリースライドショーSP版の高さを変更*/
-    .sec02 .swiper-wrapper,
-    .sec04 .swiper-wrapper {
-      width: 100%;
-      height: 270px!important;
-    }
 }
 
 /* ----------------------
