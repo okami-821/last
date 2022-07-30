@@ -262,169 +262,7 @@ main {
   }
 
 
-/*------------------------------------------------------------------------------
-  anim パララックス
-------------------------------------------------------------------------------*/
-.mv-area {
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-}
-.mv-side {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-}
-/* .mv-side::before,
-.mv-side::after {
-  content: "";
-  position: absolute;
-  width: 70px;
-  height: 100%;
-  background: #fff;
-  top: 0;
-  z-index: 1;
-} */
-/* .mv-side::before {
-  left: 0;
-}
-.mv-side::after {
-  right: 0;
-}
-/* .mv-block {
-  position: relative;
-} */
-/* .mv-ttl {
-  font-size: 50px;
-  font-weight: bold;
-  position: absolute;
-  z-index: 2;
-  text-align: center;
-  left: 0;
-  right: 0;
-  margin: auto;
-  letter-spacing: 0.1em;
-  top: 27px;
-} */
 
-/* .mv-area .skater {
-  width: 50vw;
-  height: 40vw;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  position: absolute;
-  margin: auto;
-} */
-/* .mv-area .skater img {
-  width: 100%;
-} */
-/* .mv-area::before,
-.mv-area::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 70px;
-  background: #fff;
-  left: 0;
-  z-index: 2;
-} */
-/* .mv-area::before {
-  top: 0;
-}
-.mv-area::after {
-  bottom: 0;
-}
-
-
-/* .leaves {
-  position: absolute;
-  width: 26vw;
-  max-width: 600px;
-}
-.other-block {
-  padding: 100px 0 300px;
-  position: relative;
-  background: #fff;
-} */
-/* @media screen and (min-width: 641px) {
-  .other-block .cont-wrap {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-            align-items: center;
-  }
-  .other-block .cont-wrap .img-area,
-  .other-block .cont-wrap .txt-area {
-    width: 48%;
-  }
-} */
-/* 
-.other-block .cont-wrap .txt-area .ttl {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 40px;
-}
-
-.other-block .img-area {
-  position: relative;
-}
-
-.other-block .img-area .skater02 {
-  width: 80%;
-  margin-left: auto;
-}
-
-.other-block .img-area .skater01 {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 60%;
-  z-index: 2;
-}
-
-.other-block .long-wrap {
-  position: relative;
-}
-
-.other-block .img-area .long01 {
-  width: 50%;
-  margin: 0 auto;
-}
-
-.other-block .img-area .long02 {
-  position: absolute;
-  width: 30%;
-  right: 0;
-  top: 50px;
-}
-
-.other-block .img-area .long03 {
-  position: absolute;
-  width: 30%;
-  left: 0;
-  top: 150px;
-} */
-
-/*------------------------------------------------------------------------------
-  clearfix
-------------------------------------------------------------------------------*/
-
-/* .clearfix:after,
-.inner-block:after {
-  clear: both;
-  content: "";
-  display: block;
-  height: 0px;
-  font-size: 0;
-  visibility: hidden;
-} */
 /*------------------------------------------------------------------------------
   MAIN-CONTAINER SECTION_1
 ------------------------------------------------------------------------------*/
@@ -432,37 +270,23 @@ main {
   width: 100vw;
   height: auto;
   /* height: 100vh; 怪しい光を放つ原因*/
-  background: #000; 
   position: relative;
-  z-index: 9999999;
-  /* margin-bottom: 100px */
+  background: #000; 
 }
 .sec01 h1 {
   position: absolute;
   z-index: 999999999;
-  display: inline-block;
   top: 10px;
-  right: 10px;
+  right: 11.5px;
 }
 .sec01 h1 a {
-  opacity: 1;
   display: block;
-  animation: ddd .4s 6s ease-in;
 }
-/* }
-@keyframes ddd {
-  to {
-    opacity: 0;
-  }
-  from {
-    opacity: 1;
-  }
-} */
 
 /*------------------------------------------------------------------------------
   MAIN-CONTAINER SECTION_1 PAGE-TAITLE
 ------------------------------------------------------------------------------*/
-.sec01::before{
+/* .sec01::before{
   content: '';
   position:fixed;
   top:0;
@@ -475,8 +299,8 @@ main {
   animation-timing-function: linear;
   animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
   animation-iteration-count:1;
-}
-@keyframes blackout {
+} */
+/* @keyframes blackout {
   0% {
     background-color: #000;
     opacity: 1;
@@ -489,11 +313,11 @@ main {
     background-color: none;
     opacity: 0;
   }
-}
+} */
 /*ひとまず消す*/
-.sec01::before {
+/* .sec01::before {
   display: none;
-}
+} */
 .sec01 .PageTitles.is-hidden {
   z-index: 99999999;
 }
@@ -678,10 +502,6 @@ main {
   margin-bottom: 110px;
 
 }
-
-/* .sec04 {
-  padding: 80px 0 0 0;
-} */
 .sec02 .container,
 .sec04 .container {
   width: 100%;
@@ -1172,7 +992,7 @@ main {
     padding: 0 20px;
   }
   .sec02 img.sp.delay-element {
-    transform: translate(25%, -10%);
+    transform: translate(39%, -10%);
   }
   .sec02 .side-scroll-item,
   .sec04 .side-scroll-item {
@@ -1214,29 +1034,7 @@ main {
 
   
 
-  /* .sec02 .container img.sp {
-    margin-top: -30px;
-    margin-left: 24%;
-  }
 
-  .sec02 .container .group-area {
-    margin-top: 0;
-    margin-bottom: 40px;
-  }
-  video {
-    max-width: 90%;
-    display: block;
-    margin: auto;
-  }
-  .sec02 .side-scroll-item {
-    height:60px;
-  }
-  .sec04 .side-scroll-item {
-    height:60px;
-  }
-  .side-scroll-item + .side-scroll-item {
-    margin-left: -10px;
-  }
 
 
   .sec04 .container .large-image {
@@ -1262,23 +1060,8 @@ main {
     top: -30px;
     left: 95px;
     width: 90%;
-  } */
+  } 
 
-  /* .sec03 .interview-box {
-    width: 85%;
-    bottom: 45px;
-    height: 400px;
-  }
-  .sec03 .interview-title {
-    width: 60%;
-  }
-  .sec03 .interview-text {
-    width: 85%;
-  }
-
-  .footer-wrapper {
-    padding: 40px 20px;
-  } */
 .sab-ttl {
   display: inline-block;
     margin-top: -23%;
@@ -1327,7 +1110,8 @@ main {
     margin: 40px 0 0 auto;
   }
   .sec04 .container .large-image .delay-element  {
-    transform: translate(-4%, -11%);
+    transform: translate(-5%, -15%);
+    width: 90%;
   }
   .sec04 .container .group-area {
     margin-bottom: -40px;
@@ -1337,7 +1121,6 @@ main {
   }
   .sec04 .side-scroll-item + .side-scroll-item {
     margin-left: -514px;
-    margin: 45px auto 0;
   }
   .sec03 .interview-title {
     width: 80%;
@@ -1351,6 +1134,13 @@ main {
   .sec03 .interview-box p {
     padding: 25px;
   }
+  .sec01 h1 {
+    right: 11.5px;
+    top: -2px;
+  }
+  .sec02 img.sp.delay-element {
+    width: 90%;
+  }
 
 
 
@@ -1361,7 +1151,19 @@ main {
 
 
 }
+/* ----------------------
+* 599
+------------------------- */
+@media screen and (max-width: 399px) {
+  .sec02 .side-scroll-item + .side-scroll-item {
+    margin-left: -413px;
+  }
+  .sec04 .side-scroll-item + .side-scroll-item {
+    margin-left: -514px;
+    margin: 45px auto 0;
+  }
 
+}
 /* ----------------------
 * 399
 ------------------------- */
@@ -1381,7 +1183,28 @@ main {
     max-height: 300px;
     bottom: 0;
   }
+  /* .test .swiper-wrapper {
+    width: 100%!important;
+    height: 600px!important;
+  }
+   */
+/* ----------------------
+* 319
+------------------------- */ 
+@media screen and (max-width: 399px) {
+  .sec01 h1 {
+    right: 11.5px;
+    top: -3px;
+  }
+  .box26 .box-title::after {
+    width: 140px;
+  }
+  .box26 .box-title {
+    top: -7%;
+    left: 7%;
+  }
 }
+
 /* ----------------------
 * 1025px以上
 ------------------------- */
