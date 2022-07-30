@@ -66,6 +66,7 @@ body {
   /* min-height: 100vh; */
   /* height: 100%; */
   margin: 0;
+  background: #FFF;
   text-rendering: optimizeSpeed;
   font-size: 1.6rem;
 
@@ -142,9 +143,6 @@ select::-ms-expand {
   } */
 }
 
-#wrapper {
-  position: relative;
-}
 .main-container {
   position: relative;
 }
@@ -192,6 +190,7 @@ main {
   letter-spacing: -0.2rem;
   font-family: "Hiragino Kaku Gothic Pro",sans-serif;
 }
+
 /*------------------------------------------------------------------------------
   LODING
 ------------------------------------------------------------------------------*/
@@ -211,13 +210,19 @@ main {
     transform: rotate(360deg); } }
 
 #loading {
-  width: 100vw;
+  /* width: 100vw;
   height: 100vh;
   background-color: #000;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  z-index: 100; */
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background:#000;
+  text-align:center;
 }
 #loading-main {
   display: block;
@@ -262,9 +267,35 @@ main {
   }
 
 
+/*------------------------------------------------------------------------------
+  TOP-SWIPER SLIDE
+------------------------------------------------------------------------------*/
+.SlideShow {
+  overflow: hidden;
+}
+.SlideShow .swiper {
+  overflow: visible;
+}
+.SlideShow .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+.SlideShow .swiper-slide {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.SlideShow .slide {
+  overflow: hidden;
+  width: 26rem;/*416px*/
+  transition: var(--transition);
+}
+.SlideShow .slide img {
+  transition: var(--transition);
+}
 
 /*------------------------------------------------------------------------------
-  MAIN-CONTAINER SECTION_1
+  MAIN-CONTAINER WWD-ICON
 ------------------------------------------------------------------------------*/
 .sec01 {
   width: 100vw;
@@ -282,6 +313,8 @@ main {
 .sec01 h1 a {
   display: block;
 }
+
+
 
 /*------------------------------------------------------------------------------
   MAIN-CONTAINER SECTION_1 PAGE-TAITLE
@@ -618,6 +651,9 @@ main {
 /*------------------------------------------------------------------------------
   MAIN-CONTAINER SECTION_3
 ------------------------------------------------------------------------------*/
+.sec03 {
+  position: relative;
+}
 .sec03 .interview-area {
   width: 100%;
   max-width: 840px;
@@ -641,6 +677,7 @@ main {
   max-width: 448px;
   margin: 60px auto 0;
   flex-shrink: 1;
+  fill: #FFF;
 }
 .sec03 .interview-text {
   flex: 2;
@@ -734,6 +771,10 @@ main {
 .sec04 {
   background:#FFF;
   position: relative;
+}
+.sec04 .container .sp {
+  margin-top: -30px;
+  margin-left: -20%;
 }
 .sec04.other-block {
   padding: 80px 0 1900px;
@@ -850,20 +891,6 @@ main {
 .footer-wrapper .footer-snsicon li {
   width: 42px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1064,10 +1091,6 @@ main {
     width: 90%;
   } 
 
-.sab-ttl {
-  display: inline-block;
-    margin-top: -23%;
-  }
 
     /* 0730 修正*/
 .sab-ttl {
@@ -1137,6 +1160,9 @@ main {
     right: 11.5px;
     top: -2px;
   }
+  .sec03 .interview-box p {
+    padding: 25px 0;
+  }
 
 
 
@@ -1171,10 +1197,10 @@ main {
     margin: -186px auto 40px
   }
   .sec03 .interview-title {
-    margin: 21px auto 0;
+    margin: 45px auto 0;
   } 
   .sec03 .interview-text {
-    margin: -123px auto 20px;
+    margin: -56px auto 20px;
   } 
   .sec03 .interview-box {
     margin-top: -30%;
@@ -1185,6 +1211,7 @@ main {
   }
   .sec03 .interview-box { 
     max-height: 514px;
+    margin: 0 20px 45px;
   }
   .sec01 .PageTitles.is-hidden {
     width: 100vw;
@@ -1202,6 +1229,12 @@ main {
   .box26 .box-title { 
       top: -15%;
       left: 10%;
+  }
+  /*ギャラリースライドショーSP版の高さを変更*/
+  .sec02 .swiper-wrapper,
+  .sec04 .swiper-wrapper {
+    width: 100%;
+    height: 460px!important;
   }
 }
 
@@ -1314,33 +1347,6 @@ main {
     opacity: 0;
     transform: scale(1.18);
   }
-}
-
-
-
-/*  swiper slide  */
-.SlideShow {
-  overflow: hidden;
-}
-.SlideShow .swiper {
-  overflow: visible;
-}
-.SlideShow .swiper-wrapper {
-  -webkit-transition-timing-function: linear !important;
-  transition-timing-function: linear !important;
-}
-.SlideShow .swiper-slide {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-.SlideShow .slide {
-  overflow: hidden;
-  width: 26rem;/*416px*/
-  transition: var(--transition);
-}
-.SlideShow .slide img {
-  transition: var(--transition);
 }
 
 
