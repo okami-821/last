@@ -491,9 +491,9 @@ main {
   }
 }
 /*ひとまず消す*/
-/* .sec01::before {
+.sec01::before {
   display: none;
-} */
+}
 .sec01 .PageTitles.is-hidden {
   z-index: 99999999;
 }
