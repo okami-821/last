@@ -1156,8 +1156,11 @@ main {
     margin-left: -413px;
   }
   .sec04 .side-scroll-item + .side-scroll-item {
-    margin-left: -514px;
+    margin-left: -512px;
   }
+  /* .sec04 .side-scroll-item + .side-scroll-item {
+    margin-left: -514px;
+  } */
   .side-scroll-list-wrapper {
     top: -91px;
   }
@@ -1199,7 +1202,6 @@ main {
   .box26 .box-title { 
       top: -15%;
       left: 10%;
-  
   }
 }
 
