@@ -31,58 +31,53 @@
   };
 }());
 
-// (function() {
-//   document.addEventListener('DOMContentLoaded', function() {
-//     let element = document.getElementById('PageTitles').classList.add('is-hidden');
 
+
+
+
+// (function() {
+//   const mySwiper = new Swiper('.sec01 .swiper', {
+//     effect: 'fade',
+//     fadeEffect: {
+//       crossFade: true,
+//     },
+//     loop: true,
+//     loopAdditionalSlides: 1,
+//     speed: 500,
+//     autoplay: {
+//       delay: 5000,
+//       disableOnInteraction: false,
+//       waitForTransition: false,
+//     },
+//     followFinger: false,
+//     pagination: {
+//       el: '.sec01 .swiper-pagination',
+//       clickable: true,
+//     },
 //   });
 // }());
 
-
-
-(function() {
-  const mySwiper = new Swiper('.sec01 .swiper', {
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true,
-    },
-    loop: true,
-    loopAdditionalSlides: 1,
-    speed: 500,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-      waitForTransition: false,
-    },
-    followFinger: false,
-    pagination: {
-      el: '.sec01 .swiper-pagination',
-      clickable: true,
-    },
-  });
-}());
-
-(function() {
-  const mySwiper2 = new Swiper('.sec03 .swiper', {
-    effect: 'fade',
-    fadeEffect: {
-      crossFade: true,
-    },
-    loop: true,
-    loopAdditionalSlides: 1,
-    speed: 500,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-      waitForTransition: false,
-    },
-    followFinger: false,
-    pagination: {
-      el: '.sec03 .swiper-pagination',
-      clickable: true,
-    },
-  });
-}());
+// (function() {
+//   const mySwiper2 = new Swiper('.sec03 .swiper', {
+//     effect: 'fade',
+//     fadeEffect: {
+//       crossFade: true,
+//     },
+//     loop: true,
+//     loopAdditionalSlides: 1,
+//     speed: 500,
+//     autoplay: {
+//       delay: 5000,
+//       disableOnInteraction: false,
+//       waitForTransition: false,
+//     },
+//     followFinger: false,
+//     pagination: {
+//       el: '.sec03 .swiper-pagination',
+//       clickable: true,
+//     },
+//   });
+// }());
 
 /* sec02,sec04 TitleSlide
 ------------------------------*/
@@ -156,8 +151,19 @@
         momentum: false,
       },
       breakpoints: {
-        1025: {
-          spaceBetween: 16,
+        // ウィンドウサイズが320px以下
+        320: {
+          slidesPerView: 1.5,
+        },
+        // ウィンドウサイズが480px以下
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 10
+        },
+        // ウィンドウサイズが640px以下
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 30
         }
       },
       grabCursor: true,
