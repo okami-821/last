@@ -58,7 +58,7 @@ html {
   word-break: break-word;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
-overflow: auto;
+  overflow: auto;
 }
 html:focus-within {
   scroll-behavior: smooth;
@@ -68,7 +68,7 @@ body {
   /* min-height: 100vh; */
   /* height: 100%; */
   margin: 0;
-/*   background: #FFF; */
+  /* background: #FFF; */
   text-rendering: optimizeSpeed;
   font-size: 1.6rem;
 
@@ -455,8 +455,6 @@ main {
   font-family: heisei-mincho-std, serif;
   font-weight: 300;
   font-style: normal;
-	/* test */
-	  background-color: #999;
 
   opacity: 0;
   animation: fadeIn-txt 2s 7s linear;
@@ -577,12 +575,6 @@ main {
 .side-scroll-item + .side-scroll-item {
   margin-left: 40px;
 }
-/* .title-scroll02 + .title-scroll02 {
-  margin-left: 40px;
-} */
-/* .title-scroll02 {
-  margin-left: 40px;
-} */
 
 
 /*------------------------------------------------------------------------------
@@ -687,7 +679,7 @@ main {
   padding: 0 20px;
   background: hsla(0, 0%, 100%, .6);
   overflow: hidden scroll;
-	overflow-y: auto;
+  overflow-y: auto;
   flex-shrink: 1;
 }
 .sec03 .interview-box p {
@@ -698,12 +690,12 @@ main {
   font-size: 15px;
   text-align: justify;
   text-justify: inter-ideograph;
-  padding: 35px 50px;
+  padding: 35px 45px 35px 50px;
   overflow: hidden;
 }
 .sec03 .interview-box::-webkit-scrollbar {
   width: 5px;
-	background: white;
+  background: white;
 }
 .sec03 .interview-box::-webkit-scrollbar-track {
   background: white;
@@ -711,6 +703,7 @@ main {
 .sec03 .interview-box::-webkit-scrollbar-thumb {
   background: black;
 }
+
 
 
 
@@ -1230,7 +1223,7 @@ main {
     margin: 40px 0 0 auto;
   } */
   .sec04 .container .large-image .delay-element  {
-    transform: translate(-5%, -15%);
+    transform: translate(-5%, -20%);
   }
   .sec04 .container .group-area {
     margin-bottom: -40px;
@@ -1278,12 +1271,7 @@ main {
   .sec04 .side-scroll-item + .side-scroll-item {
     margin-left: -129px;
   }
-  /* ギャラリースライドショーSP版の高さを変更 */
-.sec02 .swiper-wrapper,
-.sec04 .swiper-wrapper {
-  width: 100%;
-  height: 350px!important;
-}
+
 .footer-wrapper .inner-wrap {
   width: 100%;
 }
@@ -1315,10 +1303,10 @@ main {
     top: -91px;
   }
   .sec04 .side-scroll-list-wrapper {
-    top: -107px;
+    top: -125px;
   }
   .sec04 .block-main-image {
-    margin: -186px auto 40px
+    margin: -208px auto 60px;
   }
   .sec03 .interview-title {
     margin: 45px auto 0;
@@ -1428,56 +1416,6 @@ main {
 @media (width >= 1025px) {}
 
 
-
-
-
-
-
-
-
-
-
-/* Backimage-slider */
-.Backimage-slider {
-  position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-}
-.Backimage-slider .image {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
-.Backimage-slider .image {
-  animation-name: Backimage-slider-anime;
-  animation-delay: 0;
-  animation-iteration-count: infinite;
-  animation-duration: 10s;
-}
-@keyframes Backimage-slider-anime {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(1.18);
-  }
-}
 
 
 
