@@ -455,6 +455,8 @@ main {
   font-family: heisei-mincho-std, serif;
   font-weight: 300;
   font-style: normal;
+	/* test */
+	  background-color: #999;
 
   opacity: 0;
   animation: fadeIn-txt 2s 7s linear;
