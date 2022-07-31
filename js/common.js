@@ -132,78 +132,69 @@
 
 /* UpperSlide / LowerSlide
 ------------------------------*/
-(function() {
-  const swiperSpeed = 10000;
-  const slideLength = document.querySelectorAll('.SlideShow .UpperSlide .swiper-slide').length;
+// (function() {
+//   const swiperSpeed = 10000;
+//   const slideLength = document.querySelectorAll('.SlideShow .UpperSlide .swiper-slide').length;
 
-  const changeTranslate = (swiper, activeSlide, direction) => {
-    let currentTranslate = swiper.getTranslate();
-    let slideWidth = activeSlide.offsetWidth;
-    if(direction) {
-      swiper.setTranslate(currentTranslate - slideWidth);
-    } else {
-      swiper.setTranslate(currentTranslate + slideWidth);
-    }
-    swiper.setTransition(swiperSpeed);
-  }
+//   const changeTranslate = (swiper, activeSlide, direction) => {
+//     let currentTranslate = swiper.getTranslate();
+//     let slideWidth = activeSlide.offsetWidth;
+//     if(direction) {
+//       swiper.setTranslate(currentTranslate - slideWidth);
+//     } else {
+//       swiper.setTranslate(currentTranslate + slideWidth);
+//     }
+//     swiper.setTransition(swiperSpeed);
+//   }
 
-  const initSwiper = (target) => {
-    let params = {
-      slidesPerView: 'auto',
-      loop: true,
-      loopedSlides: slideLength,
-      speed: swiperSpeed,
-      spaceBetween: 16,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-      },
-      freeMode: {
-        enabled: true,
-        momentum: false,
-      },
-      breakpoints: {
-            // when window width is >= 320px
-      320: {
-        // slidesPerView: 1.5,
-        // spaceBetween: 200
-      },
-            // when window width is >= 640px
-      640: {
-        spaceBetween: 30,
-      },
-        1025: {
-          spaceBetween: 30,
-        }
-      },
-      grabCursor: true,
-    };
+//   const initSwiper = (target) => {
+//     let params = {
+//       slidesPerView: 'auto',
+//       loop: true,
+//       loopedSlides: slideLength,
+//       speed: swiperSpeed,
+//       spaceBetween: 16,
+//       autoplay: {
+//         delay: 0,
+//         disableOnInteraction: false,
+//       },
+//       freeMode: {
+//         enabled: true,
+//         momentum: false,
+//       },
+//       breakpoints: {
+//         1025: {
+//           spaceBetween: 30,
+//         }
+//       },
+//       grabCursor: true,
+//     };
 
-    if (target === 'a') {
-      params.on = {
-        touchEnd: (swiper) => {
-          let activeSlide = document.querySelector('.SlideShow .UpperSlide .swiper-slide-active');
-          changeTranslate(swiper, activeSlide, true);
-        },
-      };
-      const mySwiper_a = new Swiper('.SlideShow .UpperSlide', params);
-    } else if (target === 'b') {
-      params.autoplay.reverseDirection = true;
-      params.on = {
-        touchEnd: (swiper) => {
-          let activeSlide = document.querySelector('.SlideShow .LowerSlide .swiper-slide-active');
-          changeTranslate(swiper, activeSlide, false);
-        },
-      };
-      const mySwiper_b = new Swiper('.SlideShow .LowerSlide', params);
-    }
-  };
+//     if (target === 'a') {
+//       params.on = {
+//         touchEnd: (swiper) => {
+//           let activeSlide = document.querySelector('.SlideShow .UpperSlide .swiper-slide-active');
+//           changeTranslate(swiper, activeSlide, true);
+//         },
+//       };
+//       const mySwiper_a = new Swiper('.SlideShow .UpperSlide', params);
+//     } else if (target === 'b') {
+//       params.autoplay.reverseDirection = true;
+//       params.on = {
+//         touchEnd: (swiper) => {
+//           let activeSlide = document.querySelector('.SlideShow .LowerSlide .swiper-slide-active');
+//           changeTranslate(swiper, activeSlide, false);
+//         },
+//       };
+//       const mySwiper_b = new Swiper('.SlideShow .LowerSlide', params);
+//     }
+//   };
 
-  window.addEventListener('load', function(){
-    initSwiper('a');
-    initSwiper('b');
-  });
-}());
+//   window.addEventListener('load', function(){
+//     initSwiper('a');
+//     initSwiper('b');
+//   });
+// }());
 
 }());
 
