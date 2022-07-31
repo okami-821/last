@@ -308,9 +308,9 @@ main {
 /*------------------------------------------------------------------------------
   MAIN-CONTAINER SECTION_1 PAGE-TAITLE
 ------------------------------------------------------------------------------*/
-.sec01 .PageTitles.is-hidden {
+/* .sec01 .PageTitles.is-hidden {
   z-index: 99999999;
-}
+} */
 @keyframes down {
   0% {
     top: 0px;
@@ -430,14 +430,14 @@ main {
 /*------------------------------------------------------------------------------
   READ
 ------------------------------------------------------------------------------*/
-@keyframes fadeIn-txt{
+/* @keyframes fadeIn-txt{
 	0%{
 		opacity: 0;
 	}
 	100%{
 		opacity: 1;
 	}
-}
+} */
 .read-wrapp {
   width: 100%;
   max-width: 800px;
@@ -456,9 +456,9 @@ main {
   font-weight: 300;
   font-style: normal;
 
-  opacity: 0;
-  animation: fadeIn-txt 2s 7s linear;
-  animation-fill-mode: both;
+  /* opacity: 0; */
+  /* animation: fadeIn-txt 2s 7s linear;
+  animation-fill-mode: both; */
 }
 
 
@@ -578,7 +578,7 @@ main {
 
 
 /*------------------------------------------------------------------------------
-  SEC02 SEC0$ SLIDE
+  SEC02 SEC0 SLIDE
 ------------------------------------------------------------------------------*/
 .wrap {
   display: flex;
