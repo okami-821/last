@@ -245,7 +245,6 @@ main {
   left: 50%;
   border-radius: 110%; 
 }
-
   #loading-main:after {
     -webkit-animation: loading 0.75s linear infinite;
     animation: loading 0.75s linear infinite;
@@ -704,48 +703,6 @@ main {
 }
 
 
-
-
-
-/* .sec03 .interview-title {
-  -webkit-animation: mv01-fadeIn 2s 0.5s var(--easing) both;
-          animation: mv01-fadeIn 2s 0.5s var(--easing) both;
-} */
-/* @-webkit-keyframes mv01-fadeIn {
-  0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-    opacity: 0;
-    -webkit-filter: blur(300px);
-            filter: blur(300px);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-    -webkit-filter: blur(0);
-            filter: blur(0);
-  }
-} */
-/* @keyframes mv01-fadeIn {
-  0% {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
-    opacity: 0;
-    -webkit-filter: blur(300px);
-            filter: blur(300px);
-  }
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    opacity: 1;
-    -webkit-filter: blur(0);
-            filter: blur(0);
-  }
-} */
-
-
-
 /*------------------------------------------------------------------------------
   MAIN-CONTAINER SECTION_4
 ------------------------------------------------------------------------------*/
@@ -793,8 +750,6 @@ main {
   position: relative;
   top: -22px;
 }
-
-
 
 .footer-wrapper .profile-box {
   font-size: 15px;
@@ -895,25 +850,12 @@ main {
 }
 
 
-
-
-
-
-
-
-
-
-
 /* -----------------------------------------------
 * 1024px以下
 -------------------------------------------------- */
 @media screen and (max-width: 1024px) {
   .pc {display: block;}
-  .tb {display: block;}
   .sp {display: none;}
-  .mo-pc {
-    display: none
-  }
 
   #loading {
     display: flex;
@@ -997,7 +939,6 @@ main {
   left: 25%;
 }
 
-
   @keyframes down {
     0% {
       top: 0px;
@@ -1034,35 +975,15 @@ main {
   .sec03 .interview-area {
     max-width: none;
   }
-
-
-
-
-
   .sec02 img.sp.delay-element {
     transform: translate(25%, -10%);
   }
-
-
-
-
-
-
 
     @media screen and (max-width: 1024px) {
       .sec01 .l-wrapper {
         height: auto;
       }
     }
-
-  
-
-
-
-
-
-
-
 
   .sec02 .large-image .sp
   .sec04 .large-image .sp {
@@ -1072,44 +993,23 @@ main {
     width: 90%;
   } 
 
-
- 
-
-
-
-
-
-
-
-
-
   .l-wrapper {
     height: 0%;
   }
-
-
-
-
-
-
-
-
-  .sec03 .interview-box p {
+  /* .sec03 .interview-box p {
     padding: 0;
-  }
-
-
-
-
-
-
-
-
-
-
-
-
+  } */
 }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation:portrait) {
+  .sec03 .interview-box {
+    min-height: revert;
+    width: 80%;
+  }
+  .sec03 .interview-box p {
+    padding: 25px 20px 25px 25px
+  }
+  }
 
 
 /* -----------------------------------------------
@@ -1118,12 +1018,7 @@ main {
 @media screen and (max-width: 599px) {
   .pc {display: none;}
   .sp {display: block;}
-  .mo-pc {
-    display: none
-  }
-  .tb {
-    display: none;;
-  }
+
   .sab-ttl {
     display: inline-block;
       margin-top: -23%;
@@ -1285,14 +1180,6 @@ main {
 }
 
 
-
-
-
-
-
-
-
-
   /* .sec04 .side-scroll-item + .side-scroll-item {
     margin-left: -512px;
   } */
@@ -1364,11 +1251,7 @@ main {
     max-height: 433px;
   }
 }
-  /* .test .swiper-wrapper {
-    width: 100%!important;
-    height: 600px!important;
-  }
-   */
+
 
 /* -----------------------------------------------
 * 374px以下
