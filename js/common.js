@@ -170,10 +170,10 @@
       },
             // when window width is >= 640px
       640: {
-        spaceBetween: 3,
+        spaceBetween: 30,
       },
         1025: {
-          spaceBetween: 3,
+          spaceBetween: 30,
         }
       },
       grabCursor: true,
