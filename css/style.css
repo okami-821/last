@@ -45,6 +45,7 @@ html:focus-within {
   --transition: .8s var(--easing);
 }
 .pc {display: block;}
+/* .tb {display: none;} */
 .sp {display: none;}
 
 :root {
@@ -180,9 +181,13 @@ main {
 .pc {
   display: block;
 }
+.mo-pc {
+  display: block
+}
 .sp {
   display: none;
 }
+.tb {display: none;}
 
 /* 文中「ーー」を１本線にする */
 .read-wrapp span,
@@ -855,7 +860,7 @@ main {
   position: absolute;
   /* top: -20px;
   left: 270px; */
-  top: -20%;
+  top: -14%;
   left: 30%;
 }
 .box26 .box-title::after {
@@ -895,48 +900,29 @@ main {
 
 
 
+
+
+
+
+
+
 /* -----------------------------------------------
-* Modules エントリーポイント
--------------------------------------------------- */
-@media only screen and (max-width: 1024px) {}
-@media only screen and (max-width: 599px) {}
-@media only screen and (min-width: 1025px) {}
-@media only screen and (min-width: 600px) {}
-
-
-
-
-/* ----------------------
 * 1024px以下
-------------------------- */
-@media (width <= 1024px) {
-  html {
-    -webkit-text-size-adjust: 100%;
-    /*一部のモバイル端末で使われる、テキストの自動拡大アルゴリズムを制御*/
-  }
-  /* .sec01 .slide-media {
-    height: max(70vh,70vw);
-  } */
-}
-@media screen and (max-width: 1024px){
-  html {
-    -webkit-text-size-adjust: 100%;
-  }
-  /* .sec01 .slide-media {
-    height: max(70vh,70vw);
-  } */
-}
-
+-------------------------------------------------- */
 @media screen and (max-width: 1024px) {
-  .pc {display: none;}
-  .sp {display: block;}
+  .pc {display: block;}
+  .tb {display: block;}
+  .sp {display: none;}
+  .mo-pc {
+    display: none
+  }
 
   #loading {
     display: flex;
   }
   #loading-main {
-    width: 20%;
-    height: 20%;
+    width: 10%;
+    height: 10%;
     position: static;
     margin: auto;
     display: flex;
@@ -944,25 +930,76 @@ main {
     align-items: center;
     justify-content: center;
   }
+  .sec01 h1 {
+    right: 11.5px;
+    top: -6px;
+  }
+  .sec01 .swiper {
+    height: auto!important;
+  }
+  .read-wrapp p {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .read-wrapp p {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 0 60px;
+  }
   .l-wrapper {
     height: 100vh;
   }
-
   .read-wrapp {
     position: static;
     padding: 0;
   }
-  .read-wrapp p {
-    width: 80%;
-    font-size: 16px;
-    margin: 0 auto;
-    position: absolute;
-    bottom: 0;
-    z-index: 888888;
-    top: 65%;
-    left: 0;
-    right: 0;
+  .sec02 .side-scroll-item,
+  .sec04 .side-scroll-item {
+    width: 721px;
+    height: 70px;
   }
+  .sec02 .container .delay-element.delay2 {
+    transform: translateX(-50px);
+    margin-top: 40px;
+  }
+  .side-scroll-list-wrapper {
+    top: -68px;
+  }
+  .sec02 .block-main-image {
+    margin: -115px auto 80px;
+  }
+  .sec03 .interview-title {
+    width: 40%;
+  }
+  .sec03 .interview-title {
+    margin: 29px auto 0;
+  }
+  .sec03 .interview-text {
+    padding: 0 78px;
+    margin: 2px auto 9px;
+  }
+  .sec04 .container .delay-element.delay2 {
+    margin-top: 42px;
+    transform: translateX(50px);
+  }
+  .sec04 .side-scroll-list-wrapper {
+    top: -77px;
+  }
+  .sec04 .side-scroll-item + .side-scroll-item {
+    margin-left: 36px;
+ }
+ .box26 {
+  width: 100%;
+}
+.sec04 .block-main-image {
+  margin: -121px auto 80px;
+}
+.box26 .box-title {
+  top: -14%;
+  left: 25%;
+}
+
+
   @keyframes down {
     0% {
       top: 0px;
@@ -996,63 +1033,24 @@ main {
   /* .other-block {
     padding: 0;
   } */
-  .sec02, .sec04 {
-    margin-top: 45px;
-    margin-bottom: 60px;
+  .sec03 .interview-area {
+    max-width: none;
   }
-  .sec02 .container .group-area,
-  .sec04 .container .group-area {
-    margin-top: 0;
-  }
-  .sec02 .container, 
-  .sec04 .container {
-    padding: 0;
-    flex-direction: column-reverse;
-  }
-  .sec02 .container .large-image,
-  .sec04 .container .large-image {
-    width: 80%;
-    margin-top: 40px;
-  }
-  .sec02 .container .group-area, .sec04 .container .group-area {
-    width: 100%;
-    padding: 0 20px;
-  }
+
+
+
+
+
   .sec02 img.sp.delay-element {
     transform: translate(25%, -10%);
   }
-  .sec02 .side-scroll-item,
-  .sec04 .side-scroll-item {
-    height: 50px;
-  }
-  .side-scroll-item + .side-scroll-item {
-    margin-left: -402px;
-  }
-  .sec02 .block-main-image, .sec04 .block-main-image {
-    width: 100%;
-    padding: 0 20px;
-  }
-  .side-scroll-list-wrapper {
-    top: -97px;
-  }
-  .sec02 .block-main-image {
-    margin: -170px auto 80px;
-  }
-  .sec04 .block-main-image {
-    margin: -160px auto 80px;
-  }
-  /* .sec03 .interview-svg {
-    padding: 0 20px;
-  } */
-  .sec03 .interview-text {
-    padding: 0 20px;
-  }
-  /* @media screen and (max-width: 1024px) {
-    .l-wrapper {
-    height: 235vw;
-    background-color: #000;
-    }
-    } */
+
+
+
+
+
+
+
     @media screen and (max-width: 1024px) {
       .sec01 .l-wrapper {
         height: auto;
@@ -1064,23 +1062,9 @@ main {
 
 
 
-  .sec04 .container .large-image {
-    width: 80%;
-    display: flex;
-    flex-flow: column;
-    align-self: flex-end;
-  }
-  .sec02 .block-main-image,
-  .sec04 .block-main-image {
-    width: 90%;
-    max-width: 100%;
-    margin: -164px auto 40px;
-    padding: 0;
-  }
-  .sec02 .container .group-area,
-  .sec04 .container .group-area {
-    width: 100%;
-  }
+
+
+
 
   .sec02 .large-image .sp
   .sec04 .large-image .sp {
@@ -1091,10 +1075,160 @@ main {
   } 
 
 
-    /* 0730 修正*/
-.sab-ttl {
-  display: inline-block;
-    margin-top: -23%;
+ 
+
+
+
+
+
+
+
+
+
+  .l-wrapper {
+    height: 0%;
+  }
+
+
+
+
+
+
+
+
+  .sec03 .interview-box p {
+    padding: 0;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+/* -----------------------------------------------
+* 599px以下
+-------------------------------------------------- */
+@media screen and (max-width: 599px) {
+  .pc {display: none;}
+  .sp {display: block;}
+  .mo-pc {
+    display: none
+  }
+  .tb {
+    display: none;;
+  }
+  .sab-ttl {
+    display: inline-block;
+      margin-top: -23%;
+  }
+  .sec01 h1 {
+    right: 11.5px;
+    top: -2px;
+  }
+  .read-wrapp p {
+    width: 80%;
+    font-size: 16px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    z-index: 888888;
+    top: 65%;
+    left: 0;
+    right: 0;
+  }
+  .sec02, .sec04 {
+    margin-top: 45px;
+    margin-bottom: 60px;
+  }
+  .sec02 .container, 
+  .sec04 .container {
+    padding: 0;
+    flex-direction: column-reverse;
+  }
+  .sec02 .container .large-image,
+  .sec04 .container .large-image {
+    width: 80%;
+    margin-top: 40px;
+  }
+  .sec02 .side-scroll-item,
+  .sec04 .side-scroll-item {
+    height: 50px;
+  }
+  .sec02 .container .group-area,
+  .sec04 .container .group-area {
+    width: 100%;
+  }
+  .sec02 .container .group-area, .sec04 .container .group-area {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .side-scroll-list-wrapper {
+    top: -97px;
+  }
+  .side-scroll-item + .side-scroll-item {
+    margin-left: -402px;
+  }
+  .sec02 .block-main-image,
+  .sec04 .block-main-image {
+    width: 90%;
+    max-width: 100%;
+    margin: -164px auto 40px;
+    padding: 0;
+  }
+  .sec03 .interview-box {
+    margin: 20px;
+  }
+  .sec03 .interview-title {
+    width: 80%;
+  }
+  .sec03 .interview-text {
+    margin: 40px auto 30px;
+    padding: 0 20px;
+  }
+  .sec03 .interview-text p {
+    font-size: 16px;
+  }
+  .sec03 .interview-box {
+    height: 60%;
+    bottom: 45px;
+  }
+  .sec03 .interview-box p {
+    padding: 25px 0;
+  }
+  .sec04 .container .large-image {
+    width: 80%;
+    display: flex;
+    flex-flow: column;
+    align-self: flex-end;
+  }
+  /* .sec04 .container .delay-element.appear {
+    margin: 40px 0 0 auto;
+  } */
+  .sec04 .container .large-image .delay-element  {
+    transform: translate(-5%, -15%);
+  }
+  .sec04 .container .group-area {
+    margin-bottom: -40px;
+  }
+  .sec02 .container .group-area,
+  .sec04 .container .group-area {
+    margin-top: 0;
+  }
+  .sec04 .block-main-image {
+    margin: -160px auto 80px;
+  }
+  .sec02 .block-main-image, .sec04 .block-main-image {
+    width: 100%;
+    padding: 6px 20px;
   }
   .footer-wrapper {
     padding: 40px 20px;
@@ -1116,73 +1250,40 @@ main {
     padding: 0;
     margin: 45px 0 0;
   }
-  .footer-wrapper .logo-wrap {
-    width: 100%;
-    margin: 40px auto 0;
+  .sec02 .block-main-image {
+    margin: -170px auto 40px;
   }
-  .sec03 .interview-text {
-    margin: 40px auto 30px;
-  }
-  .sec03 .interview-box {
-    height: 60%;
-    bottom: 45px;
-  }
-  .l-wrapper {
-    height: 0%;
-  }
-  .sec04 .container .delay-element.appear {
-    margin: 40px 0 0 auto;
-  }
-  .sec04 .container .large-image .delay-element  {
-    transform: translate(-5%, -15%);
-  }
-  .sec04 .container .group-area {
-    margin-bottom: -40px;
-  }
-
-  .sec04 .side-scroll-item + .side-scroll-item {
+  /* .sec04 .side-scroll-item + .side-scroll-item {
     margin-left: -514px;
+  } */
+  .sec04 .block-main-image {
+    margin: -121px auto 80px;
   }
-  .sec03 .interview-title {
-    width: 80%;
-  }
-  .sec03 .interview-text p {
-    font-size: 16px;
-  }
-  .sec03 .interview-box {
-    margin: 20px;
-  }
-  .sec03 .interview-box p {
-    padding: 0;
-  }
-  .sec01 h1 {
-    right: 11.5px;
-    top: -2px;
-  }
-  .sec03 .interview-box p {
-    padding: 25px 0;
-  }
-
-
-
-
-
-
-
-
-
-
-}
-/* ----------------------
-* 599
-------------------------- */
-@media screen and (max-width: 599px) {
   .sec02 .side-scroll-item + .side-scroll-item {
-    margin-left: -413px;
+    margin-left: -183px;
   }
   .sec04 .side-scroll-item + .side-scroll-item {
-    margin-left: -512px;
+    margin-left: -129px;
   }
+  /* ギャラリースライドショーSP版の高さを変更 */
+.sec02 .swiper-wrapper,
+.sec04 .swiper-wrapper {
+  width: 100%;
+  height: 350px!important;
+}
+
+
+
+
+
+
+
+
+
+
+  /* .sec04 .side-scroll-item + .side-scroll-item {
+    margin-left: -512px;
+  } */
   /* .sec04 .side-scroll-item + .side-scroll-item {
     margin-left: -514px;
   } */
@@ -1229,17 +1330,12 @@ main {
       top: -15%;
       left: 10%;
   }
-  /*ギャラリースライドショーSP版の高さを変更*/
-  .sec02 .swiper-wrapper,
-  .sec04 .swiper-wrapper {
-    width: 100%;
-    height: 460px!important;
-  }
 }
 
-/* ----------------------
-* 399
-------------------------- */
+/* -----------------------------------------------
+* 399px以下
+-------------------------------------------------- */
+
 @media screen and (max-width: 399px) {
   .box26 .box-title::after {
       top: -8%;
@@ -1249,7 +1345,7 @@ main {
     width: 172px;
   }
   .box26 .box-title {
-    top: -10%;
+    top: -6%;
     left: 9%;
   }
   .sec03 .interview-box {
@@ -1262,9 +1358,10 @@ main {
   }
    */
 
-/* ----------------------
-* 374
-------------------------- */
+/* -----------------------------------------------
+* 374px以下
+-------------------------------------------------- */
+
 @media screen and (max-width: 374px) {
   .box26 .box-title::after {
     width: 140px;
@@ -1274,9 +1371,10 @@ main {
     left: 12%;
 }
 }
-/* ----------------------
-* 319
-------------------------- */ 
+/* -----------------------------------------------
+* 319px以下
+-------------------------------------------------- */
+
 @media screen and (max-width: 319px) {
   .sec01 h1 {
     right: 11.5px;
