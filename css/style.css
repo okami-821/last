@@ -676,7 +676,6 @@ main {
   max-width: 800px;
   min-height: 44%;
   margin: 0 auto 40px;
-  padding: 0 20px;
   background: hsla(0, 0%, 100%, .6);
   overflow: hidden scroll;
   overflow-y: auto;
@@ -1196,6 +1195,13 @@ main {
   .sec03 .interview-box {
     margin: 20px;
   }
+  .sec03 .interview-box {
+    height: 60%;
+    bottom: 45px;
+  }
+  .sec03 .interview-box p {
+    padding: 25px 20px 25px 25px;
+  }
   .sec03 .interview-title {
     width: 80%;
   }
@@ -1205,13 +1211,6 @@ main {
   }
   .sec03 .interview-text p {
     font-size: 16px;
-  }
-  .sec03 .interview-box {
-    height: 60%;
-    bottom: 45px;
-  }
-  .sec03 .interview-box p {
-    padding: 25px 0;
   }
   .sec04 .container .large-image {
     width: 80%;
@@ -1224,6 +1223,7 @@ main {
   } */
   .sec04 .container .large-image .delay-element  {
     transform: translate(-5%, -20%);
+    margin-top: 0;
   }
   .sec04 .container .group-area {
     margin-bottom: -40px;
