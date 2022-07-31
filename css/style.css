@@ -974,11 +974,12 @@ main {
   .sec01 .swiper {
     height: auto!important;
   }
-  .read-wrapp p {
+  .read-wrapp {
+    top: -100px;
     width: 80%;
     margin: 0 auto;
   }
-  .read-wrapp p {
+  .read-wrapp {
     width: 80%;
     margin: 0 auto;
     padding: 0 0 60px;
@@ -987,7 +988,6 @@ main {
     height: 100vh;
   }
   .read-wrapp {
-    position: static;
     padding: 0;
   }
   .sec02 .side-scroll-item,
@@ -1171,7 +1171,7 @@ main {
     right: 11.5px;
     top: -2px;
   }
-  .read-wrapp p {
+  .read-wrapp {
     width: 80%;
     font-size: 16px;
     margin: 0 auto;
