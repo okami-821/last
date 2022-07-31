@@ -687,6 +687,7 @@ main {
   padding: 0 20px;
   background: hsla(0, 0%, 100%, .6);
   overflow: hidden scroll;
+	overflow-y: auto;
   flex-shrink: 1;
 }
 .sec03 .interview-box p {
@@ -702,6 +703,7 @@ main {
 }
 .sec03 .interview-box::-webkit-scrollbar {
   width: 5px;
+	background: white;
 }
 .sec03 .interview-box::-webkit-scrollbar-track {
   background: white;
