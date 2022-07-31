@@ -1182,9 +1182,6 @@ main {
     left: 0;
     right: 0;
   }
-  .sec01 {
-    background: transparent;
-  }
   .sec02, .sec04 {
     margin-top: 45px;
     margin-bottom: 60px;
@@ -1312,20 +1309,6 @@ main {
   .sec04 .side-scroll-item + .side-scroll-item {
     margin-left: -129px;
   }
-  /* ギャラリースライドショーSP版の高さを変更 */
-.sec02 .swiper-wrapper,
-.sec04 .swiper-wrapper {
-  width: 100%;
-  height: 350px!important;
-}
-
-
-
-
-
-
-
-
 
 
   /* .sec04 .side-scroll-item + .side-scroll-item {
@@ -1426,6 +1409,9 @@ main {
   .sec01 h1 {
     right: 11.5px;
     top: -3px;
+  }
+  .sec01 {
+    background: none;
   }
   .box26 .box-title::after {
     width: 140px;
