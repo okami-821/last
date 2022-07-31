@@ -55,12 +55,11 @@
     var winH = $(window).height();
     var BREAKPOINT_SP = 1024;
   
-    // if ( winW <= BREAKPOINT_SP ) {
-    //   $('.sec01 .mv01 .swiper').css('height', winH);
-    // } else {
-
-    // }
+    if ( winW <= BREAKPOINT_SP ) {
+      $('.sec01 .mv01 .swiper').css('height', winH);
+    } else {
     $('.sec01 .mv01 .swiper').css('height', 'auto');
+    }
   }
 }());
 
