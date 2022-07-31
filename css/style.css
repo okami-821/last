@@ -307,9 +307,7 @@ main {
   height: auto;
   /* height: 100vh; 怪しい光を放つ原因*/
   position: relative;
-  /* background: #000;  */
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,0.8057816876750701) 38%, rgba(0,0,0,1) 85%);
+  background: #000; 
 }
 .sec01 h1 {
   position: absolute;
@@ -1183,6 +1181,9 @@ main {
     top: 65%;
     left: 0;
     right: 0;
+  }
+  .sec01 {
+    background: transparent;
   }
   .sec02, .sec04 {
     margin-top: 45px;
