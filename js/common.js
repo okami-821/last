@@ -163,23 +163,17 @@
         momentum: false,
       },
       breakpoints: {
-      // when window width is >= 300px
-      300: {
-        slidesPerView: 1.5,
-        spaceBetween: 1500,
-      },
-      // when window width is >= 320px
+            // when window width is >= 320px
       320: {
-        slidesPerView: 1.5,
-        spaceBetween: 280,
+        // slidesPerView: 1.5,
+        // spaceBetween: 200
       },
-      // when window width is >= 640px
+            // when window width is >= 640px
       640: {
-        slidesPerView: 3,
-        spaceBetween: 16,
+        spaceBetween: 3,
       },
-      1025: {
-        spaceBetween: 30,
+        1025: {
+          spaceBetween: 3,
         }
       },
       grabCursor: true,
