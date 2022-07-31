@@ -313,7 +313,7 @@ main {
   position: absolute;
   z-index: 999999999;
   top: -3px;
-  right: 11.5px;
+  right: 21.5px;
 }
 .sec01 h1 a {
   display: block;
@@ -323,38 +323,7 @@ main {
 /*------------------------------------------------------------------------------
   MAIN-CONTAINER SECTION_1 PAGE-TAITLE
 ------------------------------------------------------------------------------*/
-/* .sec01::before{
-  content: '';
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height: 100vh;
-  z-index:9999999;
-  animation-name: blackout;
-  animation-duration: 7.5s;
-  animation-timing-function: linear;
-  animation-timing-function: cubic-bezier(0.1, -0.6, 0.2, 0);
-  animation-iteration-count:1;
-} */
-/* @keyframes blackout {
-  0% {
-    background-color: #000;
-    opacity: 1;
-  }
-  80% {
-    background-color: #000;
-    opacity: 1;
-  }
-  100% {
-    background-color: none;
-    opacity: 0;
-  }
-} */
-/*ひとまず消す*/
-/* .sec01::before {
-  display: none;
-} */
+
 .sec01 .PageTitles.is-hidden {
   z-index: 99999999;
 }
@@ -413,15 +382,15 @@ main {
 }
 .sec01 .PageTitles.is-hidden .cls-2 {
   opacity: 1;
-  transition: opacity .2s 1s ease-in;
+  transition: opacity .2s 1.8s ease-in;
 }
 .sec01 .PageTitles.is-hidden .cls-3 {
   opacity: 1;
-  transition: opacity .2s 2.5s ease-in;
+  transition: opacity .2s 2.4s ease-in;
 }
 .sec01 .PageTitles.is-hidden .cls-4 {
   opacity: 1;
-  transition: opacity .2s 1.5s ease-in;
+  transition: opacity .2s 1.3s ease-in;
 }
 .sec01 .PageTitles.is-hidden .cls-5 {
   opacity: 1;
@@ -433,19 +402,19 @@ main {
 }
 .sec01 .PageTitles.is-hidden .cls-7 {
   opacity: 1;
-  transition: opacity .2s 2.5s ease-in;
+  transition: opacity .2s 2.6s ease-in;
 }
 .sec01 .PageTitles.is-hidden .cls-8 {
   opacity: 1;
-  transition: opacity .2s 2s ease-in;
+  transition: opacity .2s 2.3s ease-in;
 }
 .sec01 .PageTitles.is-hidden .cls-9 {
   opacity: 1;
-  transition: opacity .2s 3s ease-in;
+  transition: opacity .2s 3.6s ease-in;
 }
 .sec01 .PageTitles.is-hidden .cls-10 {
   opacity: 1;
-  transition: opacity .2s 3.5s ease-in;
+  transition: opacity .2s 4.1s ease-in;
 }
 
 
@@ -509,27 +478,37 @@ main {
 /*------------------------------------------------------------------------------
   READ
 ------------------------------------------------------------------------------*/
-.read-wrapp {
-  width: 100vw;
-  margin: auto;
-  padding: 60px 0;
-  /* background: #000; */
-  position: relative;
-  top: -100px;
-  height: 100%;
-  z-index: 99999;
+@keyframes fadeIn-txt{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
 }
-.read-wrapp p {
+.read-wrapp {
   width: 100%;
   max-width: 800px;
-  margin: 80px auto 0;
+  margin: 60px auto 0;
+  padding: 60px 20px;
+  position: relative;
+  top: -200px;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: 99999;
   font-size: 18px;
   text-align: left;
   color: white;
   font-family: heisei-mincho-std, serif;
   font-weight: 300;
   font-style: normal;
+
+  opacity: 0;
+  animation: fadeIn-txt 2s 8s linear;
+  animation-fill-mode: both;
 }
+
 
 /*------------------------------------------------------------------------------
   MAIN-CONTAINER SECTION_2
@@ -650,6 +629,64 @@ main {
 /* .title-scroll02 {
   margin-left: 40px;
 } */
+
+
+/*------------------------------------------------------------------------------
+  SEC02 SEC0$ SLIDE
+------------------------------------------------------------------------------*/
+.wrap {
+  display: flex;
+  align-items: center;
+  height: auto;
+  overflow: hidden;
+}
+.slideshow-top,
+.slideshow-bottom {
+  display: flex;
+}
+.content {
+  width: 400px;
+  height: 100%;
+  margin-left: 30px;
+}
+/* .content:nth-child(1) {
+  background-color: tomato;
+}
+.content:nth-child(2) {
+  background-color: orange;
+}
+.content:nth-child(3) {
+  background-color: blue;
+}
+.content:nth-child(4) {
+  background-color: green;
+} */
+.slideshow-top {
+  display: flex;
+  animation: loop-slide1 20s infinite linear 1s both;
+  animation-direction: reverse;
+}
+@keyframes loop-slide1 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.slideshow-bottom {
+  display: flex;
+  animation: loop-slide2 20s infinite linear 1s both;
+}
+@keyframes loop-slide2 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 
 
 /*------------------------------------------------------------------------------
@@ -1184,6 +1221,13 @@ main {
     margin: -164px auto 40px;
     padding: 0;
   }
+
+  .content {
+    width: 300px;
+    height: 440%;
+    margin-left: 15px;
+    }
+
   .sec03 .interview-box {
     margin: 20px;
   }
