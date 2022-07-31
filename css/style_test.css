@@ -308,10 +308,10 @@ main {
 /*------------------------------------------------------------------------------
   MAIN-CONTAINER SECTION_1 PAGE-TAITLE
 ------------------------------------------------------------------------------*/
-.sec01 .PageTitles.is-hidden {
+/* .sec01 .PageTitles.is-hidden {
   z-index: 99999999;
-}
-/* @keyframes down {
+} */
+@keyframes down {
   0% {
     top: 0px;
   }
@@ -333,7 +333,7 @@ main {
   animation-fill-mode: forwards;
   animation-delay: 4.9s;
   /* animation-timing-function: cubic-bezier(.89,0,.2,.99); */
-/* }
+}
 .sec01 .PageTitles.is-hidden {
   width: 100vw;
   position: absolute;
@@ -399,7 +399,7 @@ main {
 .sec01 .PageTitles.is-hidden .cls-10 {
   opacity: 1;
   transition: opacity .2s 4.1s ease-in;
-} */ 
+}
 
 
 
