@@ -58,6 +58,7 @@ html {
   word-break: break-word;
   -webkit-appearance: none;
   -webkit-tap-highlight-color: transparent;
+overflow: auto;
 }
 html:focus-within {
   scroll-behavior: smooth;
