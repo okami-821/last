@@ -1297,7 +1297,6 @@ main {
     margin: 0 20px 30px;
     height: auto;
     overflow: hidden;
-	-webkit-overflow-scrolling: touch;
   }
   .box26 .box-title::after {
     width: 140px;
