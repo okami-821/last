@@ -1267,16 +1267,32 @@ main {
 }
 }
 /* -----------------------------------------------
-* 319px以下
+* 320px以下
 -------------------------------------------------- */
 
-@media screen and (max-width: 319px) {
+@media screen and (max-width: 320px) {
   .sec01 h1 {
     right: 11.5px;
     top: -3px;
   }
   .sec01 {
     background: none;
+  }
+  .read-wrapp {
+    font-size: 14px;
+    top: 58%;
+  }
+  .sec03 .interview-text p {
+    font-size: 14px;
+  }
+  .sec03 .interview-box p {
+    font-size: 13px;
+  }
+  .sec03 .interview-title {
+    margin: 30px auto 0;
+  }
+  .sec03 .interview-box {
+    margin: 0 20px 30px;
   }
   .box26 .box-title::after {
     width: 140px;
