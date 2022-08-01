@@ -676,8 +676,8 @@ main {
   min-height: 44%;
   margin: 0 auto 40px;
   background: hsla(0, 0%, 100%, .6);
-  overflow: hidden scroll;
   overflow-y: auto;
+  overflow: hidden scroll;
   flex-shrink: 1;
 }
 .sec03 .interview-box p {
@@ -1287,12 +1287,15 @@ main {
   }
   .sec03 .interview-box p {
     font-size: 13px;
+    padding: 20px 15px 20px 20px;
   }
   .sec03 .interview-title {
     margin: 30px auto 0;
   }
   .sec03 .interview-box {
+    position:relative;
     margin: 0 20px 30px;
+    overflow: hidden;
   }
   .box26 .box-title::after {
     width: 140px;
@@ -1303,9 +1306,6 @@ main {
   }
   .read-wrapp {
     top: 56%;
-  }
-  .sec03 .interview-box {
-    overflow: hidden;
   }
 }
 
